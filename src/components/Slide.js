@@ -89,7 +89,7 @@ export default function Slide() {
             style={{ translateY: fadeUp, opacity: opacityText }}
             className="contain-info__top"
           >
-            <h2>My Skills</h2>
+            <h2 className="bg-blue-text">My Skills</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
               ullam laudantium, earum non dolores error saepe. Dignissimos, enim
@@ -100,7 +100,7 @@ export default function Slide() {
               style={{ translateY: fadeUp, opacity: opacityText }}
               className="text-scroll"
             >
-              Scroll to view =>
+              Drag to view
             </span>
           </motion.div>
 
@@ -109,27 +109,28 @@ export default function Slide() {
             drag="x"
             dragConstraints={{ left: xConstraint, right: 0 }}
             dragElastic={0.05}
+            className="bg-blue-text"
           >
             <li>
-              <span>HTML5</span>
+              <span>Animation</span>
             </li>
             <li>
-              <span>CSS3</span>
+              <span>Gesture</span>
             </li>
             <li>
-              <span>Javascript</span>
+              <span>Utilities</span>
             </li>
             <li>
-              <span>ReactJS</span>
+              <span>Types</span>
             </li>
             <li>
-              <span>NodeJS</span>
+              <span>Spring</span>
             </li>
             <li>
-              <span>Framer/GSAP</span>
+              <span>Ease</span>
             </li>
             <li>
-              <span>Framer/GSAP</span>
+              <span>UseCycle</span>
             </li>
           </motion.ul>
           <motion.span

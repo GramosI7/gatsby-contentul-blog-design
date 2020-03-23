@@ -1,6 +1,6 @@
 .slide-list {
   height: 100vh;
-  background-color: #092327;
+  background-color: black;
   overflow: hidden;
   .motion-background {
     height: 100%;
@@ -29,35 +29,59 @@
       svg {
         width: 12px;
         height: 12px;
-        fill: #4e8098;
+        fill: black;
       }
     }
     .contain-info {
       padding: 80px 0;
       h2 {
-        font-size: 52px;
+        font-size: 120px;
       }
       p {
-        line-height: 1.4;
+        line-height: 150%;
+        font-size: 18px;
+        font-weight: 400;
+        background: linear-gradient(
+          104.74deg,
+          rgb(198, 208, 235) 0%,
+          rgb(198, 208, 235) 100%
+        );
+        background-clip: text;
       }
       .text-scroll {
+        margin-top: 15px;
+        font-size: 20px;
+        box-shadow: rgba(101, 41, 255, 0.15) 0px 10px 20px;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
         display: inline-block;
-        margin: 40px 0;
-        margin-left: auto;
-        background-color: #90c2e7;
-        padding: 10px 20px;
-        color: #092327;
-        border-radius: 3px;
+        justify-self: center;
+        white-space: nowrap;
+        background: linear-gradient(
+          104.74deg,
+          rgb(0, 85, 255) 0%,
+          rgb(0, 170, 255) 100%
+        );
+        border-radius: 30px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        padding: 16px 60px;
+        outline: none;
+        transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
+        margin-top: 20px;
       }
       ul {
         width: fit-content;
         cursor: pointer;
-        margin: 20% 0 100px;
+        margin: 15% 0 100px;
         list-style: none;
         display: flex;
         align-items: center;
         // background-color: red;
-        height: 100px;
+        height: 120px;
         font-size: 100px;
         font-weight: bold;
         li {
@@ -70,8 +94,15 @@
       }
       .text-bottom {
         display: block;
-        font-size: 22px;
         margin-top: 170px;
+        font-size: 18px;
+        font-weight: 400;
+        background: linear-gradient(
+          104.74deg,
+          rgb(198, 208, 235) 0%,
+          rgb(198, 208, 235) 100%
+        );
+        background-clip: text;
       }
     }
   }
