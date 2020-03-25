@@ -1,19 +1,24 @@
 import React from "react"
+import Image from "gatsby-image"
 
 // Style
 import "../../styles/Examples/Example.scss"
 
-export default function Example() {
-  return (
-    <div className="example">
-      <div className="text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque a, sequi
-        esse eum delectus aut!
+export default function Example({ info, direction }) {
+  console.log(info, direction)
+  if (direction === "left") {
+    return (
+      <div className="example">
+        <div className="text left">{info.text}</div>
+        <Image className="image" fluid={info.image.fluid} />
       </div>
-      <img
-        src="https://images.ctfassets.net/ooa29xqb8tix/4iOGwW8LwI84oyu0MUqMYU/9b682c244d7df221470019c6c82b2adf/DraggedImage-1.jpeg"
-        alt=""
-      />
+    )
+  }
+
+  return (
+    <div className="example right">
+      <Image className="image" fluid={info.image.fluid} />
+      <div className="text right">{info.text}</div>
     </div>
   )
 }

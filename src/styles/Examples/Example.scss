@@ -4,6 +4,9 @@
   grid-template-columns: 300px 1fr;
   gap: 40px;
   align-items: center;
+  &.right {
+    grid-template-columns: 1fr 300px;
+  }
   .text {
     position: relative;
     background: linear-gradient(
@@ -16,8 +19,32 @@
     color: #fff;
     font-weight: 500;
     font-size: 20px;
+    &.left {
+      border-bottom-right-radius: 0;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -18px;
+        right: 0px;
+        border-bottom: 20px solid transparent;
+        border-right: 20px solid rgb(0, 170, 255);
+      }
+    }
+    &.right {
+      border-bottom-left-radius: 0;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -18px;
+        left: 0px;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid rgb(0, 85, 255);
+      }
+    }
   }
-  img {
+  .image {
     width: 100%;
     border-radius: 20px;
   }

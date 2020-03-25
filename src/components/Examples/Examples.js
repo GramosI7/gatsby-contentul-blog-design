@@ -3,6 +3,7 @@ import React from "react"
 // Style
 import "../../styles/Examples/Examples.scss"
 import Example from "./Example"
+import { StaticQuery, graphql } from "gatsby"
 
 export default function Examples() {
   return (
@@ -13,9 +14,37 @@ export default function Examples() {
           <br />
           <span>design and code tools</span>
         </h3>
-        <Example />
-        <Example />
+        <StaticQuery
+          query={getData}
+          render={data => {
+            const items = data.item.edges
+            return items.map((element, index) => {
+              return index % 2 === 0 ? (
+                <Example key={index} info={element.node} direction="left" />
+              ) : (
+                <Example key={index} info={element.node} direction="right" />
+              )
+            })
+          }}
+        />
       </div>
     </section>
   )
 }
+
+const getData = graphql`
+  {
+    item: allContentfulExample {
+      edges {
+        node {
+          text
+          image {
+            fluid(maxWidth: 700) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+  }
+`
