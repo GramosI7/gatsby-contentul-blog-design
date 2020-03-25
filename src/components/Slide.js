@@ -4,6 +4,7 @@ import "../styles/Slide.scss"
 import Close from "../assets/close.svg"
 
 import { motion, useSpring, useTransform } from "framer-motion"
+import Wave from "./Wave"
 
 let targetElement = document.querySelector("html")
 
@@ -28,7 +29,7 @@ function debounce(fn, ms) {
 export default function Slide() {
   const [state, setState] = useState(false)
   let [width, setWidth] = useState(getWidth())
-  const [xConstraint, setXConstraint] = useState(-8000)
+  const [xConstraint, setXConstraint] = useState(-6600)
 
   let x = useSpring(0, { stiffness: 200, damping: 300, ease: ease })
   const scale = useTransform(x, [-1000, 0], [3, 1])
@@ -37,12 +38,16 @@ export default function Slide() {
   const fadeDown = useTransform(x, [-300, 0], [100, 0])
   const opacityText = useTransform(x, [-300, 0], [0, 1])
   const fadeOn = useTransform(x, [-400, 0], [0, -100])
+  const displayIt = useTransform(x, [-1, 0], [1, -100])
 
   useEffect(() => {
+    if (window.matchMedia("(max-width: 500px)").matches) {
+      setXConstraint(-7000)
+    }
     const debouncedHandleResize = debounce(function handleResize() {
       setWidth(getWidth())
       if (window.matchMedia("(max-width: 500px)").matches) {
-        setXConstraint(-8300)
+        setXConstraint(-7000)
       }
     }, 1000)
     // set resize listener
@@ -71,9 +76,9 @@ export default function Slide() {
   }
 
   return (
-    <section className="slide-list">
+    <motion.section className="slide-list">
       <motion.div
-        style={{ opacity }}
+        style={{ opacity, zIndex: displayIt }}
         className="motion-background"
       ></motion.div>
       <div className="container">
@@ -141,6 +146,7 @@ export default function Slide() {
           </motion.span>
         </div>
       </div>
-    </section>
+      <Wave color="#fff" />
+    </motion.section>
   )
 }

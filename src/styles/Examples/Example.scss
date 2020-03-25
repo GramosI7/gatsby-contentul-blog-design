@@ -1,0 +1,24 @@
+.example {
+  margin: 100px 0;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: center;
+  .text {
+    position: relative;
+    background: linear-gradient(
+      104.74deg,
+      rgb(0, 85, 255) 0%,
+      rgb(0, 170, 255) 100%
+    );
+    padding: 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  img {
+    width: 100%;
+    border-radius: 20px;
+  }
+}

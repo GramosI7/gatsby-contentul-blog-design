@@ -1,28 +1,31 @@
 .slide-list {
-  height: 100vh;
   background-color: black;
   overflow: hidden;
+  position: relative;
   .motion-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     height: 100%;
     width: 100%;
     opacity: 0;
     background-color: lightgrey;
-    position: absolute;
-    z-index: 0;
+    overflow: hidden;
   }
   .container {
+    padding: 130px 24px 100px;
     position: relative;
     z-index: 1;
     color: #4e8098;
     height: 100%;
     max-width: 1030px;
-    padding: 0 42px;
     margin: auto;
     .btn-delete {
-      position: absolute;
-      z-index: 1;
-      right: 42px;
-      top: 120px;
+      position: fixed;
+      right: 30%;
+      top: 200px;
       opacity: 0;
       font-weight: bold;
       cursor: pointer;
@@ -33,21 +36,7 @@
       }
     }
     .contain-info {
-      padding: 80px 0;
-      h2 {
-        font-size: 120px;
-      }
-      p {
-        line-height: 150%;
-        font-size: 18px;
-        font-weight: 400;
-        background: linear-gradient(
-          104.74deg,
-          rgb(198, 208, 235) 0%,
-          rgb(198, 208, 235) 100%
-        );
-        background-clip: text;
-      }
+      padding: 60px 0 0;
       .text-scroll {
         margin-top: 15px;
         font-size: 20px;
@@ -74,9 +63,10 @@
         margin-top: 20px;
       }
       ul {
+        cursor: move; /* fallback if grab cursor is unsupported */
+        cursor: grab;
         width: fit-content;
-        cursor: pointer;
-        margin: 15% 0 100px;
+        margin: 20% 0 20%;
         list-style: none;
         display: flex;
         align-items: center;
@@ -84,6 +74,11 @@
         height: 120px;
         font-size: 100px;
         font-weight: bold;
+        &:active {
+          cursor: grabbing;
+          cursor: -moz-grabbing;
+          cursor: -webkit-grabbing;
+        }
         li {
           &:first-child {
             margin-left: 0;
@@ -94,15 +89,13 @@
       }
       .text-bottom {
         display: block;
-        margin-top: 170px;
+        line-height: 150%;
+        -webkit-text-fill-color: transparent;
         font-size: 18px;
         font-weight: 400;
-        background: linear-gradient(
-          104.74deg,
-          rgb(198, 208, 235) 0%,
-          rgb(198, 208, 235) 100%
-        );
-        background-clip: text;
+        margin: 0px;
+        background: linear-gradient(104.74deg, #c6d0eb 0%, #c6d0eb 100%);
+        -webkit-background-clip: text;
       }
     }
   }
@@ -110,8 +103,4 @@
 
 .no-scroll {
   overflow: hidden;
-}
-
-.try {
-  height: 100vh;
 }
