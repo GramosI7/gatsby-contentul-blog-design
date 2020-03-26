@@ -4,7 +4,7 @@ import "../styles/Wave.scss"
 export default function Wave(props) {
   return (
     <svg
-      className={props.position ? "waveTop" : "waveBottom"}
+      className={props.position === "top" ? "waveTop" : "waveBottom"}
       width="100%"
       height="172"
       xmlns="http://www.w3.org/2000/svg"

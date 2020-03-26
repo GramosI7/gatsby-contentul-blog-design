@@ -1,0 +1,65 @@
+.courses {
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 280px 24px 120px;
+    @media (max-width: 940px) {
+      grid-template-columns: 1fr;
+    }
+    .left-side {
+      h3 {
+        font-size: 40px;
+        line-height: 120%;
+        span {
+          color: #fff;
+        }
+      }
+      p {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 400;
+        @media (max-width: 600px) {
+          font-size: 20px;
+        }
+      }
+    }
+    .right-side {
+      ul {
+        li {
+          margin-bottom: 40px;
+          display: grid;
+          grid-template-columns: 80px 1fr;
+          grid-template-rows: 100px;
+          gap: 20px;
+          align-items: center;
+          .background {
+            height: 100%;
+            width: 100%;
+            background: url("https://d1sz9tkli0lfjq.cloudfront.net/items/0R1U1H1Y1d3727150L1T/framer-x-course.jpg")
+              center center / cover no-repeat;
+            border-radius: 10px;
+            overflow: hidden;
+          }
+          .info {
+            h5 {
+              color: #fff;
+              font-size: 30px;
+              @media (max-width: 600px) {
+                font-size: 20px;
+              }
+            }
+            p {
+              @media (max-width: 600px) {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import Slide from "../components/Slide"
 import Header from "../components/header"
 import Nav from "../components/Nav"
 import Examples from "../components/Examples/Examples"
+import Courses from "../components/Courses/Courses"
 
 const IndexPage = () => (
   <main>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <Header />
     <Slide />
     <Examples />
+    <Courses />
   </main>
 )
 

@@ -5,7 +5,6 @@ import Image from "gatsby-image"
 import "../../styles/Examples/Example.scss"
 
 export default function Example({ info, direction }) {
-  console.log(info, direction)
   if (direction === "left") {
     return (
       <div className="example">

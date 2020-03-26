@@ -1,9 +1,16 @@
 .examples {
   background-color: #fff;
+  position: relative;
   .container {
-    padding: 80px 24px 80px;
+    padding: 80px 24px 40px;
     h3 {
       font-size: 80px;
+      @media (max-width: 1000px) {
+        font-size: 7vw;
+      }
+      @media (max-width: 600px) {
+        font-size: 8vw;
+      }
     }
   }
 }

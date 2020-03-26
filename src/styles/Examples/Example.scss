@@ -4,8 +4,14 @@
   grid-template-columns: 300px 1fr;
   gap: 40px;
   align-items: center;
+  @media (max-width: 730px) {
+    grid-template-columns: 1fr;
+  }
   &.right {
     grid-template-columns: 1fr 300px;
+    @media (max-width: 730px) {
+      grid-template-columns: 1fr;
+    }
   }
   .text {
     position: relative;
@@ -47,5 +53,8 @@
   .image {
     width: 100%;
     border-radius: 20px;
+    @media (max-width: 730px) {
+      grid-row: 2 / auto;
+    }
   }
 }
