@@ -1,7 +1,8 @@
-import React, { useRef, useEffect, useState } from "react"
+import React from "react"
 import Course from "./Course"
 import Wave from "../Wave"
 import { graphql, StaticQuery } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 // Style
 import "../../styles/Courses/Courses.scss"
@@ -29,7 +30,14 @@ export default function Courses() {
               query={getData}
               render={data => {
                 return data.item.edges.map((element, index) => (
-                  <Course key={index} {...element.node} />
+                  <AniLink
+                    key={index}
+                    paintDrip
+                    hex="#1a223d"
+                    to={`/cours/${element.node.slug}`}
+                  >
+                    <Course {...element.node} />
+                  </AniLink>
                 ))
               }}
             />
@@ -47,6 +55,7 @@ const getData = graphql`
         node {
           title
           desc
+          slug
           image {
             fluid(quality: 100, maxWidth: 1920) {
               ...GatsbyContentfulFluid_withWebp

@@ -1,0 +1,88 @@
+.template-course {
+  .contain-background-header {
+    height: 900px;
+    background-image: url("../../images/framer-course-1.jpg");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    @media (max-width: "690px") {
+      height: 700px;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      .header-title {
+        color: #fff;
+        padding: 0 24px;
+        h1 {
+          font-size: 60px;
+          @media (max-width: "1040px") {
+            font-size: 7vw;
+          }
+          @media (max-width: "690px") {
+            font-size: 9vw;
+          }
+        }
+        .desc {
+          margin-top: 20px;
+          font-size: 26px;
+          @media (max-width: "690px") {
+            font-size: 5vw;
+            margin-top: 10px;
+          }
+        }
+      }
+      .arrow {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          margin-top: 5px;
+          width: 30px;
+          fill: #fff;
+        }
+      }
+    }
+  }
+  .content-course {
+    background-color: #222d4f;
+    .container {
+      padding: 40px 24px 40px;
+      .content {
+        * {
+          margin: initial;
+          padding: initial;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: 40px;
+          color: #fff;
+          margin-left: -1.1px;
+          margin: 26px 0 0px;
+        }
+        p {
+          font-size: 18px;
+          margin: 20px 0;
+        }
+        img {
+          margin: 10px 0 10px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+}

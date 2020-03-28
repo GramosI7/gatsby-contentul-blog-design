@@ -1,0 +1,57 @@
+.page-courses {
+  .page-courses__header {
+    height: 850px;
+    background: url("../../images/dark-background.jpg") center center / cover;
+    position: relative;
+    .container {
+      padding: 150px 24px 200px;
+      display: grid;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+      img {
+        width: 64px;
+        justify-self: center;
+      }
+      .page-courses__header__title {
+        .page-courses__header__title__info {
+          margin: 10px 0;
+          .number-section {
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+          .author {
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+        h1 {
+          font-size: 80px;
+          font-weight: 700;
+          color: #fff;
+          background: linear-gradient(
+              104.74deg,
+              rgb(240, 243, 245) 0%,
+              rgb(240, 243, 245) 100%
+            )
+            text;
+          line-height: 120%;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .page-courses__container-course {
+    background: #222d4f;
+    .container {
+      padding: 50px 40px 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+      justify-items: center;
+    }
+  }
+}

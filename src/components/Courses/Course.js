@@ -3,6 +3,9 @@ import BackgroundImage from "gatsby-background-image"
 import { motion } from "framer-motion"
 import { useIntersection } from "react-use"
 
+// Style
+import "../../styles/Courses/Course.scss"
+
 const variants = {
   hidden: {
     x: 100,
@@ -33,6 +36,7 @@ export default function Course({ title, desc, image }) {
 
   return (
     <motion.li
+      className="course"
       ref={sectionRef}
       initial="hidden"
       animate={appear ? "show" : "hidden"}

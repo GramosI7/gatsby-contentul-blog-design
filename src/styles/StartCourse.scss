@@ -1,0 +1,90 @@
+.start-course {
+  background-color: #000;
+  .container {
+    padding: 80px 24px;
+    text-align: center;
+    max-width: 800px;
+    h3 {
+      color: #fff;
+      // font-size: 60px;
+      span {
+      }
+    }
+    p {
+      margin: 30px 0px;
+      font-size: 24px;
+      line-height: 150%;
+      @media (max-width: "690px") {
+        font-size: 18px;
+      }
+    }
+    .button-start {
+      font-size: 24px;
+      box-shadow: rgba(101, 41, 255, 0.15) 0px 10px 20px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-block;
+      justify-self: center;
+      white-space: nowrap;
+      background: linear-gradient(
+        104.74deg,
+        rgb(0, 85, 255) 0%,
+        rgb(0, 170, 255) 100%
+      );
+      border-radius: 30px;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      padding: 16px 60px;
+      outline: none;
+      transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
+      &:hover {
+        box-shadow: rgba(101, 41, 255, 0.25) 0px 20px 40px;
+        transform: translateY(-3px);
+      }
+    }
+    .info-social {
+      p {
+        margin-top: 70px;
+      }
+      .button-twitter {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        box-shadow: rgba(101, 41, 255, 0.15) 0px 10px 20px;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        justify-self: center;
+        white-space: nowrap;
+        background: linear-gradient(
+          104.74deg,
+          rgb(0, 85, 255) 0%,
+          rgb(0, 170, 255) 100%
+        );
+        border-radius: 30px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        padding: 16px 40px;
+        outline: none;
+        transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
+        &:hover {
+          box-shadow: rgba(101, 41, 255, 0.25) 0px 20px 40px;
+          transform: translateY(-3px);
+        }
+        svg {
+          width: 26px;
+          fill: rgba(255, 255, 255, 0.6);
+        }
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}

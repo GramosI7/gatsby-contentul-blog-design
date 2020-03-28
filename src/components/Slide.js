@@ -55,7 +55,7 @@ export default function Slide() {
     return () => {
       window.removeEventListener("resize", debouncedHandleResize)
     }
-  })
+  }, [width])
 
   useEffect(() => {
     x.onChange(() => {
@@ -142,7 +142,7 @@ export default function Slide() {
             style={{ translateY: fadeDown, opacity: opacityText }}
             className="text-bottom"
           >
-            You see my skills ? 😵
+            Motion Drag
           </motion.span>
         </div>
       </div>

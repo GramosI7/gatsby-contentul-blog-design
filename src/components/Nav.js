@@ -2,23 +2,12 @@ import React, { useEffect, useState } from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { motion } from "framer-motion"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 // Style
 import "../styles/Nav.scss"
 
-// const fadeUp = {
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       delay: 2.7,
-//       duration: 1.2,
-//     },
-//   },
-//   hidden: { opacity: 0, y: 100 },
-// }
-
-let easing = [0.6, -0.05, 0.01, 0.99]
+// let easing = [0.6, -0.05, 0.01, 0.99]
 
 const fadeDown = {
   visible: {
@@ -55,31 +44,37 @@ export default function Nav() {
           initial="hidden"
           animate="visible"
           variants={fadeDown}
-          className={scroll > 50 && "mini-nav"}
+          className={scroll > 50 ? "mini-nav" : ""}
         >
           <div className="container">
             <ul>
               <li className="logo">
-                <a href="">
+                <AniLink paintDrip hex="#1a223d" to="/">
                   <Img fixed={data.framer.childImageSharp.fixed} />
-                </a>
+                </AniLink>
               </li>
               <li>
-                <a href="!#">Animation</a>
+                <AniLink paintDrip hex="#1a223d" to="/">
+                  Home
+                </AniLink>
               </li>
               <li>
-                <a href="!#">Gesture</a>
+                <AniLink paintDrip hex="#1a223d" to="/courses">
+                  Courses
+                </AniLink>
               </li>
               <li>
-                <a href="!#">Utilities</a>
+                <AniLink paintDrip hex="#1a223d" to="/about">
+                  About
+                </AniLink>
               </li>
               <li>
-                <a href="!#">Types</a>
+                <AniLink paintDrip hex="#1a223d" to="/contact">
+                  Contact
+                </AniLink>
               </li>
               <li className="mode">
-                <a href="">
-                  <Img fixed={data.react.childImageSharp.fixed} />
-                </a>
+                <Img fixed={data.react.childImageSharp.fixed} />
               </li>
             </ul>
           </div>
