@@ -8,13 +8,20 @@ import { motion, AnimatePresence } from "framer-motion"
 import "../../styles/page-about/modal-about.scss"
 
 export default function ModalAbout({ open, handleModal }) {
-  let targetElement = document.querySelector("html")
+  // var targetElement = ""
+
+  // useEffect(() => {
+  //   open
+  //     ? targetElement.classList.add("no-scroll")
+  //     : targetElement.classList.remove("no-scroll")
+  // }, [open])
 
   useEffect(() => {
-    open
-      ? targetElement.classList.add("no-scroll")
-      : targetElement.classList.remove("no-scroll")
-  }, [open])
+    if (typeof window === "undefined" || !window.document) {
+      console.log(`bailing out of the useeffect. Going to continue to render??`)
+      return
+    }
+  }, [])
 
   return (
     <AnimatePresence>
