@@ -6,8 +6,6 @@ import Close from "../assets/close.svg"
 import { motion, useSpring, useTransform } from "framer-motion"
 import Wave from "./Wave"
 
-let targetElement = document.querySelector("html")
-
 const ease = [0.6, 0.05, -0.01, 0.99]
 
 const getWidth = () =>
@@ -27,6 +25,8 @@ function debounce(fn, ms) {
 }
 
 export default function Slide() {
+  let targetElement = document.querySelector("html")
+
   const [state, setState] = useState(false)
   let [width, setWidth] = useState(getWidth())
   const [xConstraint, setXConstraint] = useState(-6600)

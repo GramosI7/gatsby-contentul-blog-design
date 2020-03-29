@@ -7,10 +7,8 @@ import { motion, AnimatePresence } from "framer-motion"
 // Style
 import "../../styles/page-about/modal-about.scss"
 
-let targetElement = document.querySelector("html")
-
 export default function ModalAbout({ open, handleModal }) {
-  console.log(open)
+  let targetElement = document.querySelector("html")
 
   useEffect(() => {
     open
