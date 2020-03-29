@@ -9,9 +9,10 @@ import Wave from "./Wave"
 const ease = [0.6, 0.05, -0.01, 0.99]
 
 const getWidth = () =>
-  window.innerWidth ||
-  document.documentElement.clientWidth ||
-  document.body.clientWidth
+  typeof window !== "undefined" &&
+  (window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth)
 
 function debounce(fn, ms) {
   let timer
