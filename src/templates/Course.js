@@ -18,7 +18,6 @@ export default function Course({ data }) {
     contenu: { json },
   } = data.course
 
-  console.log(image)
   const options = {
     renderNode: {
       "embedded-asset-block": node => {

@@ -9,39 +9,33 @@ export default function Footer() {
       <div className="container">
         <div className="footer__top">
           <div className="list main">
-            <ul>
-              <div className="title">
-                <p>Main</p>
-              </div>
-              <li>Home</li>
-              <li>Design System</li>
-              <li>Licenses</li>
-              <li>Jobs</li>
-              <li>English</li>
-            </ul>
+            <div className="title">
+              <p>Main</p>
+            </div>
+            <div className="item-list">Home</div>
+            <div className="item-list">Design System</div>
+            <div className="item-list">Licenses</div>
+            <div className="item-list">Jobs</div>
+            <div className="item-list">English</div>
           </div>
           <div className="list ressource">
-            <ul>
-              <div className="title">
-                <p>Ressource</p>
-              </div>
-              <li>Dowloads</li>
-              <li>Angle Mockups</li>
-              <li>iOS UI Kit</li>
-              <li>Iphone X Wallpapers</li>
-              <li>5k Wallpaper</li>
-            </ul>
+            <div className="title">
+              <p>Ressource</p>
+            </div>
+            <div className="item-list">Dowloads</div>
+            <div className="item-list">Angle Mockups</div>
+            <div className="item-list">iOS UI Kit</div>
+            <div className="item-list">Iphone X Wallpapers</div>
+            <div className="item-list">5k Wallpaper</div>
           </div>
           <div className="list community">
-            <ul>
-              <div className="title">
-                <p>Community</p>
-              </div>
-              <li>Learn Ressources</li>
-              <li>Testimonials</li>
-              <li>Meetups</li>
-              <li>Help</li>
-            </ul>
+            <div className="title">
+              <p>Community</p>
+            </div>
+            <div className="item-list">Learn Ressources</div>
+            <div className="item-list">Testimonials</div>
+            <div className="item-list">Meetups</div>
+            <div className="item-list">Help</div>
           </div>
         </div>
         <div className="footer_bottom">

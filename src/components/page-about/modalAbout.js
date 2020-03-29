@@ -16,7 +16,6 @@ export default function ModalAbout({ open, handleModal }) {
         ? targetElement.classList.add("no-scroll")
         : targetElement.classList.remove("no-scroll")
     }
-    console.log(open, targetElement)
   }, [open, targetElement])
 
   useEffect(() => {

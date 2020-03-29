@@ -123,27 +123,26 @@ export default function Slide() {
             drag="x"
             dragConstraints={{ left: xConstraint, right: 0 }}
             dragElastic={0.05}
-            className="bg-blue-text"
           >
-            <li>
+            <li className="bg-blue-text">
               <span>Animation</span>
             </li>
-            <li>
+            <li className="bg-blue-text">
               <span>Gesture</span>
             </li>
-            <li>
+            <li className="bg-blue-text">
               <span>Utilities</span>
             </li>
-            <li>
+            <li className="bg-blue-text">
               <span>Types</span>
             </li>
-            <li>
+            <li className="bg-blue-text">
               <span>Spring</span>
             </li>
-            <li>
+            <li className="bg-blue-text">
               <span>Ease</span>
             </li>
-            <li>
+            <li className="bg-blue-text">
               <span>UseCycle</span>
             </li>
           </motion.ul>
