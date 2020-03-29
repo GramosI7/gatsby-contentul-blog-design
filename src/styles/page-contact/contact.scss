@@ -16,6 +16,9 @@
       display: grid;
       gap: 5px;
       width: 600px;
+      @media (max-width: 490px) {
+        width: 300px;
+      }
       input {
         background: rgba(255, 255, 255, 0.2);
         border: 1px solid rgba(255, 255, 255, 0.2);

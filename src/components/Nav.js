@@ -4,11 +4,13 @@ import Img from "gatsby-image"
 import { motion } from "framer-motion"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import ModalAbout from "./page-about/modalAbout"
+import LogoHome from "../assets/home-solid.svg"
+import LogoCourse from "../assets/list-ul-solid.svg"
+import LogoAccount from "../assets/about.svg"
+import LogoEmail from "../assets/email.svg"
 
 // Style
 import "../styles/Nav.scss"
-
-// let easing = [0.6, -0.05, 0.01, 0.99]
 
 const fadeDown = {
   visible: {
@@ -48,7 +50,7 @@ export default function Nav() {
           variants={fadeDown}
           className={scroll > 50 ? "mini-nav" : ""}
         >
-          <div className="container">
+          <div className="container nav-deskop">
             <ul>
               <li className="logo">
                 <AniLink paintDrip hex="#1a223d" to="/" duration={1}>
@@ -77,6 +79,32 @@ export default function Nav() {
                 <Img fixed={data.react.childImageSharp.fixed} />
               </li>
             </ul>
+          </div>
+          <div className="nav-phone">
+            <div className="container">
+              <ul>
+                <li>
+                  <AniLink paintDrip hex="#1a223d" to="/" duration={1}>
+                    <LogoHome />
+                  </AniLink>
+                </li>
+                <li>
+                  <AniLink paintDrip hex="#1a223d" to="/courses" duration={1}>
+                    <LogoCourse />
+                  </AniLink>
+                </li>
+                <li>
+                  <a onClick={() => setOpenAbout(true)}>
+                    <LogoAccount />
+                  </a>
+                </li>
+                <li>
+                  <AniLink paintDrip hex="#1a223d" to="/contact" duration={1}>
+                    <LogoEmail />
+                  </AniLink>
+                </li>
+              </ul>
+            </div>
           </div>
           <ModalAbout open={openAbout} handleModal={setOpenAbout} />
         </motion.nav>

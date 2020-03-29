@@ -6,6 +6,10 @@ nav {
   z-index: 999;
   padding: 50px 0px;
   transition: 0.2s ease-in;
+  // display: none;
+  @media (max-width: 490px) {
+    padding: 20px 0;
+  }
   &.mini-nav {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.6);
@@ -16,6 +20,12 @@ nav {
     height: 100%;
     max-width: 800px;
     margin: 0px auto;
+    &.nav-deskop {
+      display: block;
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
     ul {
       list-style: none;
       height: 100%;
@@ -47,6 +57,34 @@ nav {
             align-items: center;
             img {
               width: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .nav-phone {
+    // background-color: rgba(0, 0, 0, 0.6);
+    // backdrop-filter: blur(20px);
+    padding: 15px;
+    display: none;
+    @media (max-width: 600px) {
+      display: block;
+    }
+    .container {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+        li {
+          a {
+            display: flex;
+            align-items: center;
+            svg {
+              width: 30px;
+              height: 30px;
+              fill: #222d4f;
             }
           }
         }

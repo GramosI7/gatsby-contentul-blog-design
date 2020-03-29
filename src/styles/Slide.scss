@@ -78,6 +78,9 @@
         font-size: 100px;
         font-weight: bold;
         color: #fff;
+        @media (max-width: 690px) {
+          font-size: 60px;
+        }
         &:active {
           cursor: grabbing;
           cursor: -moz-grabbing;
@@ -89,6 +92,9 @@
           }
           pointer-events: none;
           margin: 0 100px;
+          @media (max-width: 690px) {
+            margin: 0 40px;
+          }
         }
       }
       .text-bottom {
