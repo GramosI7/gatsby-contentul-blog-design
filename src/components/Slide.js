@@ -123,7 +123,7 @@ export default function Slide() {
             drag="x"
             dragConstraints={{ left: xConstraint, right: 0 }}
             dragElastic={0.05}
-            className="bg-blue-text"
+            // className="bg-blue-text"
           >
             <li>
               <span>Animation</span>

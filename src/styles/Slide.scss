@@ -69,14 +69,15 @@
         z-index: 10;
         cursor: move; /* fallback if grab cursor is unsupported */
         cursor: grab;
-        // width: auto;
-        margin: 20% 0 20%;
+        width: fit-content;
+        margin: 100px 0 100px;
         list-style: none;
         display: flex;
         align-items: center;
         height: 120px;
         font-size: 100px;
         font-weight: bold;
+        color: #fff;
         &:active {
           cursor: grabbing;
           cursor: -moz-grabbing;
