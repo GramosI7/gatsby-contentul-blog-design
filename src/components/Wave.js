@@ -1,15 +1,15 @@
 import React from "react"
 import "../styles/Wave.scss"
 
-export default function Wave(props) {
+export default function Wave({ position, color, height = 172 }) {
   return (
     <svg
-      className={props.position === "top" ? "waveTop" : "waveBottom"}
+      className={position === "top" ? "waveTop" : "waveBottom"}
       width="100%"
-      height="172"
+      height={height}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path fill={props.color}>
+      <path fill={color}>
         <animate
           repeatCount="indefinite"
           fill="freeze"

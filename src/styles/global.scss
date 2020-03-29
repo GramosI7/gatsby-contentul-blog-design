@@ -118,3 +118,7 @@ p {
     color-stop(0.86, rgb(28, 58, 148))
   );
 }
+
+.tl-wrapper {
+  transform: inherit !important;
+}

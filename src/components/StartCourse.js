@@ -17,7 +17,7 @@ export default function StartCourse() {
           of using Framer X to create a single source of truth for your team,
           leveraging the power of React.
         </p>
-        <button class="button-start">Start Free Course</button>
+        <button className="button-start">Start Free Course</button>
         <div className="info-social">
           <p>
             Tweet "Create powerful design and code components for your app and
