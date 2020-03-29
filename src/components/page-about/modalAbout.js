@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Cross from "../../assets/cross.svg"
 import Wave from "../Wave"
 
@@ -8,20 +8,23 @@ import { motion, AnimatePresence } from "framer-motion"
 import "../../styles/page-about/modal-about.scss"
 
 export default function ModalAbout({ open, handleModal }) {
-  // var targetElement = ""
+  const [targetElement, setElement] = useState()
 
-  // useEffect(() => {
-  //   open
-  //     ? targetElement.classList.add("no-scroll")
-  //     : targetElement.classList.remove("no-scroll")
-  // }, [open])
+  useEffect(() => {
+    if (typeof targetElement !== "undefined") {
+      open
+        ? targetElement.classList.add("no-scroll")
+        : targetElement.classList.remove("no-scroll")
+    }
+    console.log(open, targetElement)
+  }, [open, targetElement])
 
   useEffect(() => {
     if (typeof window === "undefined" || !window.document) {
-      console.log(`bailing out of the useeffect. Going to continue to render??`)
       return
     }
-  }, [])
+    setElement(document.querySelector("html"))
+  }, [open, targetElement])
 
   return (
     <AnimatePresence>

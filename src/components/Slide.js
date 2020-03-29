@@ -25,11 +25,10 @@ function debounce(fn, ms) {
 }
 
 export default function Slide() {
-  let targetElement = document.querySelector("html")
-
   const [state, setState] = useState(false)
   let [width, setWidth] = useState(getWidth())
   const [xConstraint, setXConstraint] = useState(-6600)
+  const [targetElement, setElement] = useState()
 
   let x = useSpring(0, { stiffness: 200, damping: 300, ease: ease })
   const scale = useTransform(x, [-1000, 0], [3, 1])
@@ -65,10 +64,19 @@ export default function Slide() {
 
   //Setting body scroll
   useEffect(() => {
-    state
-      ? targetElement.classList.add("no-scroll")
-      : targetElement.classList.remove("no-scroll")
+    if (typeof targetElement !== "undefined") {
+      state
+        ? targetElement.classList.add("no-scroll")
+        : targetElement.classList.remove("no-scroll")
+    }
   })
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.document) {
+      return
+    }
+    setElement(document.querySelector("html"))
+  }, [targetElement])
 
   const closeProductDrag = () => {
     x.stop()
