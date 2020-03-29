@@ -58,12 +58,15 @@
         border-style: none;
         border-color: initial;
         border-image: initial;
+        border: none;
         padding: 16px 60px;
         outline: none;
         transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.2) 0s;
         margin-top: 20px;
       }
       ul {
+        position: relative;
+        z-index: 10;
         cursor: move; /* fallback if grab cursor is unsupported */
         cursor: grab;
         width: fit-content;
@@ -71,7 +74,6 @@
         list-style: none;
         display: flex;
         align-items: center;
-        // background-color: red;
         height: 120px;
         font-size: 100px;
         font-weight: bold;
