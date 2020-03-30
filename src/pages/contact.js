@@ -50,10 +50,10 @@ export default function Contact() {
           <h2>Send me a message</h2>
           <form
             onSubmit={onSubmit}
-            // name="contact"
-            // method="POST"
-            // data-netlify="true"
-            // data-netlify-honeypot="bot-field"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="contact" />
             <input
@@ -80,11 +80,6 @@ export default function Contact() {
               required
             />
             <button type="submit">Send</button>
-          </form>
-          <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <textarea name="message"></textarea>
           </form>
         </div>
       </div>
