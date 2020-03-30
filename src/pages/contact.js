@@ -26,7 +26,7 @@ export default function Contact() {
     e.preventDefault()
     console.log(formData)
     axios
-      .post("/contact", {
+      .post("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...formData }),
@@ -80,6 +80,11 @@ export default function Contact() {
               required
             />
             <button type="submit">Send</button>
+          </form>
+          <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <textarea name="message"></textarea>
           </form>
         </div>
       </div>
