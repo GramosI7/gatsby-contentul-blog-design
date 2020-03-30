@@ -15,10 +15,12 @@ const fadeUp = {
   hidden: {
     y: -100,
     opacity: 0,
+    pointerEvents: "none",
   },
   show: {
     y: 0,
     opacity: 1,
+    pointerEvents: "initial",
   },
 }
 
@@ -26,19 +28,23 @@ const fadeDown = {
   hidden: {
     y: 100,
     opacity: 0,
+    pointerEvents: "none",
   },
   show: {
     y: 0,
     opacity: 1,
+    pointerEvents: "initial",
   },
 }
 
 const fade = {
   hidden: {
     opacity: 0,
+    pointerEvent: "none",
   },
   show: {
     opacity: 1,
+    pointerEvent: "initial",
   },
 }
 
@@ -110,7 +116,7 @@ export default function Contact() {
             <input
               onChange={onChange}
               value={formData.email}
-              // type="email"
+              type="email"
               name="email"
               placeholder="Email"
               required
