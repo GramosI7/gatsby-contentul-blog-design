@@ -18,14 +18,9 @@ export default function contact() {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
-            <input type="name" name="name" placeholder="Name" required />
+            <input type="text" name="name" placeholder="Name" required />
             <input type="email" name="email" placeholder="Email" required />
-            <textarea
-              type="text"
-              name="message"
-              placeholder="Message"
-              required
-            />
+            <textarea name="message" placeholder="Message" required />
             <button type="submit">Send</button>
           </form>
         </div>
