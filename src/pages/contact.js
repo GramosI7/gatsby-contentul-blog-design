@@ -24,15 +24,16 @@ export default function Contact() {
 
   const onSubmit = e => {
     e.preventDefault()
-    console.log(formData)
+    const form = e.target
+    const axiosConfig = {
+      header: { "Content-Type": "application/x-www-form-urlencoded" },
+    }
     axios
       .post("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...formData }),
+        body: encode({ "form-name": form.getAttribute("name"), ...formData }),
+        axiosConfig,
       })
       .then(() => {
-        // console.log("response:", response);
         alert("success")
       })
       .catch(() => {
@@ -49,11 +50,11 @@ export default function Contact() {
           <Logo />
           <h2>Send me a message</h2>
           <form
-            onSubmit={onSubmit}
             name="contact"
             method="POST"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
+            onSubmit={onSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
             <input
