@@ -25,14 +25,14 @@ export default function Contact() {
   const onSubmit = e => {
     e.preventDefault()
     const form = e.target
-    const axiosConfig = {
-      header: { "Content-Type": "application/x-www-form-urlencoded" },
-    }
-    axios
-      .post("/", {
-        body: encode({ "form-name": form.getAttribute("name"), ...formData }),
-        axiosConfig,
-      })
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...formData,
+      }),
+    })
       .then(() => {
         alert("success")
       })
