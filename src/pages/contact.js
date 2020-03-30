@@ -26,7 +26,7 @@ export default function Contact() {
     e.preventDefault()
     console.log(formData)
     axios
-      .post("/", {
+      .post("/contact", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...formData }),
