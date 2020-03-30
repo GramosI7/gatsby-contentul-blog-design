@@ -12,10 +12,20 @@ export default function contact() {
         <div className="container">
           <Logo />
           <h2>Send me a message</h2>
-          <form name="contact" method="POST" data-netlify="true">
-            <input type="name" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email" />
-            <textarea type="text" name="message" placeholder="Message" />
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <input type="name" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea
+              type="text"
+              name="message"
+              placeholder="Message"
+              required
+            />
             <button type="submit">Send</button>
           </form>
         </div>
