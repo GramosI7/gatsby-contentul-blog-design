@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "framer-motion": "^1.10.0",
     "gatsby": "^2.20.6",
     "gatsby-background-image": "^0.10.2",
